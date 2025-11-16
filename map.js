@@ -57,15 +57,14 @@ map.on('load', async () => {
     let jsonData;
     try {
       const jsonurl = 'https://dsc106.com/labs/lab07/data/bluebikes-stations.json';
-      const jsonData = await d3.json(jsonurl);
-
+      jsonData = await d3.json(jsonurl);
       console.log('Loaded JSON Data:', jsonData);
-
-      let stations = jsonData.data.stations;
-      console.log('Stations Array:', stations);
     } catch (error) {
       console.error('Error loading JSON:', error);
     }
+
+    let stations = jsonData.data.stations;
+    console.log('Stations Array:', stations);
 
     const circles = svg
       .selectAll('circle')
