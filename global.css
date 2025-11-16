@@ -8,3 +8,31 @@ body {
   margin: auto;
   padding: 1em;
 }
+
+header {
+  display: flex;
+  gap: 1em;
+  align-items: baseline;
+  padding: 0.5rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+#time-filter {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#selected-time,
+#any-time {
+  display: block;
+}
+
+#any-time {
+  font-style: italic;
+  color: black;
+}
